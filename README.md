@@ -3,6 +3,7 @@ Via GIPHY
 
 # analog-clock
 A web designed analog clock
+![](show.mp4)
 
 ## How to access it
 * [**Click here**](https://hezekiah-elisha.github.io/analog-clock/)
