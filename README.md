@@ -1,4 +1,5 @@
-<iframe src="https://giphy.com/embed/YoKld91p1Hw9rSmIQr" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/SWR3-r-swr3-kemal-YoKld91p1Hw9rSmIQr">via GIPHY</a></p>
+![](https://media.giphy.com/media/YoKld91p1Hw9rSmIQr/giphy.gif)
+Via GIPHY
 
 # analog-clock
 A web designed analog clock
