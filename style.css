@@ -1,0 +1,141 @@
+:root{
+    --main-color: #37bdc7;
+    --main-bg-color: #030313;
+    --main-font: 'Roboto', sans-serif;
+    --hour-color: #f3fe39;
+    --minute-color: #50eee6;
+    --second-color: red;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "astera";
+    src: url(./ASTERA\ v2.ttf);
+}
+
+body{
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    /* font-size: 16px; */
+    transition: all ease 0.2s;
+    position: relative;
+}
+h1, div p{
+    font-family: "astera";
+    padding: 20px;
+    color: var(--hour-color);
+    text-align: center;
+}
+div p a{
+    color: var(--main-color);
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+div p a:hover{
+    color: var(--hour-color);
+}
+
+.clock{
+    min-height: 18em;
+    min-width: 18em;
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    background-image: url("https://imvpn22.github.io/analog-clock/clock.png");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    /* box-shadow: 0 0 0.5em 0.5em var(--main-bg-color); */
+    /* border: #37bdc7 0.5em solid; */
+    border: 8px solid var(--main-color);
+    transition: all ease 0.2s;
+    /* box-shadow: 0 0 0.5em 0.5em var(--main-color); */
+    animation-name: clock-background;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.clock:before {
+    content: "";
+    height: 0.75em;
+    width: 0.75em;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 0.5em 0.5em #f3fe39;
+    position: absolute;
+    transition: all ease-in-out 0.2s;
+
+}
+
+.minute, .hour, .second {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border-radius: 60%;
+}
+
+.hour{
+    height: 10em;
+    width: 10em;
+}
+.hour:before{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 6px;
+    background-color: var(--hour-color);
+    border-radius: 6px;
+}
+
+.minute{
+    height: 14em;
+    width: 14em;
+}
+
+.minute:before{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 4px;
+    background-color: var(--minute-color);
+    /* background-color: red; */
+    border-radius: 5px;
+}
+
+.second{
+    height: 15em;
+    width: 15em;
+    /* background-color: aqua; */
+}
+
+.second:before{
+    content: "";
+    /* position: absolute; */
+    height: 60%;
+    width: 2px;
+    background-color: var(--second-color);
+    border-radius: 2px;
+}
+
+@keyframes clock-background {
+    0%   {box-shadow: 0 0 0.5em 0.5em var(--main-color);}
+    25%  {box-shadow: 0 0 0.5em 0.5em var(--hour-color);}
+    50%  {box-shadow: 0 0 0.5em 0.5em var(--minute-color);}
+    100% {box-shadow: 0 0 0.5em 0.5em var(--second-color);}
+}
